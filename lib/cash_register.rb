@@ -1,10 +1,10 @@
 class CashRegister
   attr_accessor :total, :discount
-  @items = []
 
   def initialize(discount = 0)
     @total = 0
     @discount = discount
+    @items = []
   end
 
   def add_item(total, price, quantity = 1)        #set optional quantity for a minimum of 1
