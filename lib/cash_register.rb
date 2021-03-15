@@ -7,7 +7,7 @@ class CashRegister
     @items = []
   end
 
-  def add_item(total, price, quantity = 1)        #set optional quantity for a minimum of 1
+  def add_item(item, price, quantity = 1)        #set optional quantity for a minimum of 1
     quantity.times do
       @items << item
     end
