@@ -16,7 +16,7 @@ class CashRegister
 
   def apply_discount
     if @discount > 0
-      @total = (@total - @total * @discount.to_f / 100)               #to_f makes it a floating number
+      @total = (@total - @total * @discount.to_f / 100).to_i               #to_f makes it a floating number
       return "After the discount, the total comes to $#{@total.to_i}."
     else
       return "There is no discount to apply."
