@@ -8,7 +8,10 @@ class CashRegister
   end
 
   def add_item(total, price, quantity = 1)        #set optional quantity for a minimum of 1
-    @total += price * quantity                    #minima default quantity of 1, aditional quantity will be added to the price.
+    quantity.times do
+      @items << item
+    end
+    @total += price * quantity                    #minimal default quantity of 1, aditional quantity will be added to the price.
   end
 
   def apply_discount
@@ -18,10 +21,6 @@ class CashRegister
     else
       return "There is no discount to apply."
     end
-  end
-
-  def items
-    @items
   end
 
 
